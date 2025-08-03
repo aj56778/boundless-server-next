@@ -18,7 +18,7 @@ export async function POST(request) {
     const db = env.DB; // 'DB' matches your binding name
 
     const sql = `
-    INSERT INTO reviews (userId, images, title, description, rating, location, time, public)
+    INSERT INTO Posts (userId, images, title, description, rating, location, time, public)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
