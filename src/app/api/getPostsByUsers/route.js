@@ -9,7 +9,7 @@ export async function GET(request) {
     const userIds = searchParams.getAll("ids");
     const placeholders = userIds.map(() => "?").join(", ");
     const sql = `
-    SELECT * FROM Posts WHERE userId IN ${placeholders}
+    SELECT * FROM Posts WHERE userId IN (${placeholders})
   `;
 
     const { results } = await db
