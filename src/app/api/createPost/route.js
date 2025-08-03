@@ -1,6 +1,4 @@
-export const runtime = "edge";
-
-export default async function createPost(request) {
+export async function POST(request) {
   try {
     const {
       userId,
