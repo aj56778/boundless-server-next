@@ -1,3 +1,5 @@
+import { getCloudflareContext } from "@opennextjs/cloudflare";
+
 export async function POST(request) {
   try {
     const {
@@ -12,7 +14,8 @@ export async function POST(request) {
     } = await request.json();
 
     console.log({ userId });
-    const db = globalThis.DB; // 'DB' matches your binding name
+    const { env } = getCloudflareContext(); // Extract Cloudflare env bindings
+    const db = env.DB; // 'DB' matches your binding name
 
     const sql = `
     INSERT INTO reviews (userId, images, title, description, rating, location, time, public)
