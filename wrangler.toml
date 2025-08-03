@@ -1,0 +1,4 @@
+[[d1_databases]]
+binding = "DB"                  # This is how you’ll access it in code
+database_name = "boundless-db"      # Your existing DB name
+database_id = "2d90dd5c-ccb6-457f-b767-1aa50f6a055d" # The ID you got from Cloudflare dashboard
